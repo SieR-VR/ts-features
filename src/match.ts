@@ -14,7 +14,7 @@ type Default<T> = {
     _?: (() => T);
 }
 
-type MatchTarget<T extends {}, U extends keyof T = keyof T> = {
+export type Enum<T extends {}, U extends keyof T = keyof T> = {
     [K1 in U]: {
         [K2 in K1]: T[K2];
     } & {
@@ -22,15 +22,15 @@ type MatchTarget<T extends {}, U extends keyof T = keyof T> = {
     }
 }[U];
 
-export type Enum<T extends {}> = {
+export type EnumConstructor<T extends {}> = {
     [K in keyof T]: (arg: T[K]) => { [K_ in K]: T[K] };
 }
 
-export function to_enum<T extends {}>(): Enum<T> {
-    return {} as Enum<T>;
+export function to_enum<T extends {}>(): EnumConstructor<T> {
+    return {} as EnumConstructor<T>;
 }
 
-export function match<T, U extends {}>(target: MatchTarget<U>, callbacks: MatchCallback<T, U>): T {
+export function match<T, U extends {}>(target: Enum<U>, callbacks: MatchCallback<T, U>): T {
     for (const key in target) {
         return callbacks[key](target[key]!);
     }

@@ -72,6 +72,8 @@ expect(result).toBe("rose red");
 
 ```
 
+You can discover samples at [tests](https://github.com/SieR-VR/ts-features/blob/master/tests/match.test.ts)!
+
 ## Rust-like error process
 
 You can import these classes
