@@ -68,7 +68,7 @@ const result = match<string, Color>(Color.Red(["rose"]), {
     Green: ([first]) => `${first} green`,
 });
 
-expect(result).toBe("red");
+expect(result).toBe("rose red");
 
 ```
 
