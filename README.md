@@ -4,6 +4,30 @@ This library is for using typescript more comfortable, and bring rust features t
 
 # Usage
 
+## installation
+
+Type at your shell
+
+```shell
+
+yarn add ts-features
+
+```
+
+and register transformer to tsconfig.json
+
+```json
+
+{
+    "compilerOptions": {
+        "plugins": [
+            { "transform": "ts-features/lib/transform" }
+        ]
+    }    
+}
+
+```
+
 ## pattern-matching
 
 Write interface like this
