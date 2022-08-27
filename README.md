@@ -28,6 +28,18 @@ and register transformer to tsconfig.json
 
 ```
 
+Also, you should use 
+
+```
+yarn ttsc
+```
+
+instead of
+
+```
+yarn tsc
+```
+
 ## pattern-matching
 
 Write interface like this
