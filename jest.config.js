@@ -6,7 +6,7 @@ module.exports = {
   globals: {
     'ts-jest': {
       compiler: "ttypescript",
-      tsconfig: "tsconfig.json"
+      tsconfig: "tests/tsconfig.json"
     },
   }
 };
