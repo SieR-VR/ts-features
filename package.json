@@ -1,6 +1,6 @@
 {
   "name": "ts-features",
-  "version": "1.3.1",
+  "version": "1.3.3",
   "description": "some typescript features like rust",
   "main": "lib/index.js",
   "typings": "types/index.d.ts",

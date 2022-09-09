@@ -18,7 +18,7 @@ export namespace CallExpressionTransformer {
             return expression;
 
         const functor: (() => Task) | undefined = FUNCTORS[type.symbol.name];
-        if (!functor && type.symbol.name === "toString") 
+        if (!functor || type.symbol.name === "toString") 
             return expression;
 
         return functor()(project, expression.expression, expression);
