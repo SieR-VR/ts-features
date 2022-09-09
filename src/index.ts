@@ -11,3 +11,9 @@ export {
     Ok,
     Result
 } from "./result";
+
+export {
+    Some,
+    None,
+    Option
+} from "./option";
