@@ -21,7 +21,7 @@ and register transformer to tsconfig.json
 {
     "compilerOptions": {
         "plugins": [
-            { "transform": "ts-features/lib/transform" }
+            { "transform": "ts-features/lib/transformer" }
         ]
     }    
 }
